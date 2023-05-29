@@ -1,4 +1,4 @@
-//CSD405 Tyler O'Riley 05/29/2023 Assignment 1
+//CSD405 Tyler O'Riley 05/29/2023 Assignment 2
 //Java program to create the Fan Class and test various functions
 
 class Fan{
@@ -53,22 +53,41 @@ class Fan{
         this.color = clr;
     }
 
-    public void fanState() {
+    public void fanState() { //Prints the fan it is attached to (fan5.fanState)
         System.out.println("Fan Speed: " + this.speed);
         System.out.println("Fan Radius: " + this.radius);
         System.out.println("Fan is On: " + this.on);
         System.out.println("Fan Color: " + this.color);
     }
+
+
 }
 
-class module1 { //Runs Code
+class UseFans { //Runs Code
     public static void main(String[] args) {
         Fan newFan = new Fan();                 //Creates default fan from default constructor
-        System.out.println("Default Fan");
-        newFan.fanState();
-
         Fan newFan1 = new Fan(2, 8, false, "Purple");  //creates custom fan from custom constructor
-        System.out.printf("\nNew Fan\n");
-        newFan1.fanState();
+        Fan newFan2 = new Fan(3, 4, true, "Rainbow");
+
+        Fan fanList[] = {newFan, newFan1, newFan2};
+
+        showFans(fanList);
+        returnFan(newFan2);
+    }
+    public static void showFans(Fan fanList[]) {
+        for(int idx=0; idx < fanList.length; idx++) {
+            System.out.println("FAN " + (idx + 1));
+            System.out.println("Fan Speed: " + fanList[idx].getSpeed());
+            System.out.println("Fan Radius: " + fanList[idx].getRadius());
+            System.out.println("Fan is On: " + fanList[idx].getOn());
+            System.out.println("Fan Color: " + fanList[idx].getColor());
+        }
+    }
+
+    public static void returnFan(Fan givenFan) {     //Returns information about GIVEN fan
+        System.out.println("Fan Speed: " + givenFan.getSpeed());
+        System.out.println("Fan Radius: " + givenFan.getRadius());
+        System.out.println("Fan is On: " + givenFan.getOn());
+        System.out.println("Fan Color: " + givenFan.getColor());
     }
 }
