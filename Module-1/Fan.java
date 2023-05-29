@@ -19,7 +19,7 @@ class Fan{
     public int getRadius() {
         return this.radius;
     }
-    public int getOn() {
+    public boolean getOn() {
         return this.on;
     }
     public int getSpeed() {
@@ -32,7 +32,7 @@ class Fan{
     public void setRadius(int newRadius) {
         this.radius = newRadius;
     }
-    public void setOn(int newOn) {
+    public void setOn(boolean newOn) {
         this.on = newOn;
     }
     public void setSpeed(int newSpeed) {
