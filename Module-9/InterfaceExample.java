@@ -1,4 +1,4 @@
-//CSD405 Tyler O'Riley 06/28/2023 Assignment 9
+//CSD405 Tyler O'Riley 06/28/2023 Assignments 9
 //Java program for basic interface syntax
 
 //Code frame used from Alex Lee's YouTube tutorial Example: https://www.youtube.com/watch?v=kTpp5n_CppQ
